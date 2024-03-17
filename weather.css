@@ -1,8 +1,23 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--body-font);
 }
 
 body {
@@ -24,7 +39,7 @@ body {
   border-radius: 16px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   padding: 20px;
-  color: white;
+  color: var(--white-color);
   transition: height 0.6s ease;
 }
 
@@ -52,14 +67,14 @@ body {
   outline: none;
   border-radius: 10px;
   font-size: 22px;
-  color: white;
-  font-weight: 500;
+  color: var(--white-color);
+  font-weight: var(--font-medium);
   text-transform: uppercase;
   padding: 0 48px 0 42px;
 }
 
 .search-box input::placeholder {
-  color: white;
+  color: var(--white-color);
   text-transform: capitalize;
 }
 
@@ -84,8 +99,6 @@ body {
   visibility: hidden;
 }
 
-
-
 .weather-box.active {
   visibility: visible;
 }
@@ -95,13 +108,11 @@ body {
   transform: translateY(-100%);
 }
 
-
 .weather-box.active .box,
 .not-found .box {
   transform: translateY(0%);
   transition-delay: 6s;
   transition: transform 6s ease;
-
 }
 
 .weather-box img {
@@ -123,7 +134,7 @@ body {
 
 .weather-box .description {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   text-transform: capitalize;
 }
 
@@ -169,12 +180,12 @@ body {
 .weather-details span {
   display: inline-block;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
 
 .weather-details p {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
 
 .not-found {
@@ -192,7 +203,7 @@ body {
 
 .not-found p {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   margin-top: 12px;
 }
 
